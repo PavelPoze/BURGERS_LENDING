@@ -1,0 +1,356 @@
+* {             /* задаёт стиль для всех элементов страницы */
+    margin: 0;    /* внешний отступ 0 */
+    padding: 0;   /* внутренний отстпут 0 */
+}
+
+@font-face {     /* подключение шрифтов */
+    font-family: 'Gilroy';    /* выбрали основной шрифт */
+    src: url("../fonts/Gilroy-Semibold.ttf");             /* прописываем путь до файлов с шрифтом */
+}
+@font-face {     /* подключение шрифтов */
+    font-family: 'Merriweather';    /* выбрали основной шрифт */
+    src: url("../fonts/Merriweather-Black.ttf");             /* прописываем путь до файлов с шрифтом */
+}
+
+body {
+    background-color: #191411;
+    font-family: 'Gilroy', sans-serif;  /* прописали для всей странице шрифт и страховочный */
+    color: white;
+}
+
+
+.container {
+    max-width: 1200px;  /* задали максимальную ширину */
+    margin: 0 auto;       /* контейрнер всегда по цнтру */
+}
+
+.button {
+    border-radius: 8px;
+    background: linear-gradient(135deg, #DA8023 0%, #E2B438 100%);
+    width: 260px;
+    height: 62px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    color: #191411;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #ac6115 0%, #9e7a19 100%);
+}
+
+.common-title {
+    font-family: Merriweather, sans-serif;
+    font-size: 64px;
+    line-height: 80px; /* высота строки */
+    text-align: center; /* выравнивание по центру */
+    letter-spacing: 0.03em; /* межбуквенный интервал */
+    text-transform: uppercase;  /* буквы  капсом */
+}
+
+.main {
+    overflow: hidden;
+    background-image: url("../images/main_bg.png");
+    background-position: top center;
+}
+
+
+.header {
+    padding: 40px 0;  /* для хедера задали отступ сверх и снизу 40 рх, слева и справа 0 */
+}
+
+
+
+.header .container {
+    display: flex; /* для отображения элементов в одну строку */
+    align-items: center;  /* выравнивание по вертикали по центру */
+}
+
+.logo img {
+    vertical-align: bottom; /* убирает авто подчеркивание браузером */
+}
+
+.menu {
+    margin-left: 191px;  /* задаёт отступ от блока слева */
+}
+
+.menu-list {
+    list-style: none; /* убирает маркеры у списков */
+    display: flex;    /* выставляет в строку */
+}
+
+.menu-item {
+    margin-right: 88px;  /* задали отступ српава */
+}
+
+.menu-item a {  /* применяется для вложенных элементов "а" */
+    font-size: 18px;
+    color: #FFF;
+    text-decoration: none;  /* убирает подчеркивание */
+    cursor: pointer;   /* при наведение появляется кликающая рука */
+}
+
+.menu-item a:hover {
+    border-bottom: 2px solid white; /* при наведении подчеркивает белой чертой */
+}
+
+.currency {
+    border-radius: 5px;
+    border: 1px solid #FFF;
+    width: 45px; /* ширина */
+    height: 45px; /* высота */
+    padding: 6px; /* внутр отступ */
+    box-sizing: border-box;  /* размер квадрат */
+    text-align: center; /* текст по центру */
+    cursor: pointer;  /* курсор рука */
+    line-height: 32px;  /* размер шрифта */
+    margin-left: auto; /* примыкание к правому краю */
+    user-select: none; /* запрет выделения тектса */
+}
+
+/* блок хедера закончился*/
+/* начинается основной блок */
+
+.main-content {
+    padding-top: 103px;  /* отпступ свехру */
+    padding-bottom: 199px; /* отспут снизу */
+}
+
+
+.main-content .container {
+    position: relative;
+}
+
+.main-info {
+    max-width: 608px;
+}
+
+.main-cmall-info {
+    border-radius: 100px;
+    background: #D3320F;
+    padding: 12px 16px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.main-title {
+    font-family: Merriweather, sans-serif;
+    font-size: 120px;
+    line-height: 130%;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    margin-bottom: 56px;
+}
+
+.main-text {
+    font-size: 24px;
+    font-style: normal;
+    margin-bottom: 59px;
+}
+
+.main-images {
+    position: absolute;
+    top: -123px;
+    left: calc(100% - 991px);
+}
+
+.why {
+    background-image: url("../images/whybg.png");
+    background-position: top center;  /* положение вертикально вверх горизонт ценрт */
+    background-size: initial;  /* размер по умолчанию */
+    padding-bottom: 180px;
+}
+
+
+.why-items {
+    margin-top: 60px;
+    display: grid;
+    gap: 100px;  /* задаёт отступы внутри контейнера */
+    grid-template-columns: repeat(3, 312px);
+    justify-content: center;
+}
+
+.why-item {
+    text-align: center;
+}
+
+.why-item-title {
+    font-size: 24px;
+    line-height: normal;
+    padding: 24px 0;
+
+}
+
+.why-item-text {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+
+.products {
+    background-image: url("../images/burgers_bg.png");
+    background-position: top center;
+    background-size: 1400px;
+    padding-bottom: 180px;
+}
+
+
+.products-items {
+    display: grid;
+    grid-template-columns: repeat(3, 384px);
+    gap: 24px;
+    margin-top: 60px;
+
+}
+
+.products-item {
+    padding: 30px;
+    background: #211A16;
+    border-radius: 16px;
+    border: 1px solid  #353535;
+}
+
+.products-item-image {
+    height: 250px;
+
+}
+
+.products-item-image img {
+    max-width: 100%;
+}
+
+.products-item-title {
+    font-size: 24px;
+    line-height: 29px;
+    padding: 24px 0;
+
+}
+
+.product-item-text {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 24px;
+
+}
+
+.products-item-extra {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.products-item-price {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 8px;
+}
+
+.products-item-weight {
+    font-size: 16px;
+    line-height: 18px;
+    color: #757575;
+}
+
+.button.product-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 182px;
+    height: 60px;
+}
+
+.button.product-button span:first-child {
+    margin-right: 10px;
+}
+
+.order {
+    background-image: url("../images/order_bg.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-bottom: 180px;
+    overflow: hidden;
+}
+
+.order .container {
+    position: relative;
+
+}
+
+.order-images {
+    position: absolute;
+    top: 0;
+    right: calc(100% - 764px);
+    z-index: -1;
+
+}
+
+.order-form {
+    background: #211A16;
+    border: 1px solid #353535;
+    border-radius: 16px;
+    margin-top: 60px;
+    max-width: 426px;
+    box-sizing: border-box;
+    padding: 60px 40px;
+    margin-left: 674px;
+
+}
+
+.order-form-text {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.order-form-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.order-form-input {
+    background: linear-gradient(95.61deg, #DA8023 0%, #E2B438 100%);
+    width: 344px;
+    height: 62px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-form-input input {
+    padding: 20px 10px;
+    background: #211A16;
+    border-radius: 8px;
+    width: 342px;
+    height: 60px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid transparent;
+    color: white;
+}
+.order-form-inputs .button {
+    width: 344px;
+    height: 62px;
+}
+
+.footer {
+     padding: 60px 0;
+}
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rights {
+    font-size: 16px;
+    line-height: 20px;
+}
